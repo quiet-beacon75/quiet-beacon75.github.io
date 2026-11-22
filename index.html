@@ -1,0 +1,1186 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>美之图写真馆 - 官方视频门户 | 记录真实光影的品牌影像社区</title>
+<meta name="description" content="美之图写真馆官方网站，专注人像写真与生活影像的原创视频品牌，汇聚专业摄影师与创作者，持续输出高清写真记录、拍摄幕后的精品内容与真实社区故事。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232a2438'/%3E%3Ccircle cx='32' cy='26' r='11' fill='%23f0b96b'/%3E%3Crect x='14' y='42' width='36' height='8' rx='4' fill='%23c96f5c'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --mzt-ink:#241f2e;
+    --mzt-ink-soft:#4a4258;
+    --mzt-muted:#7d7489;
+    --mzt-paper:#faf7f2;
+    --mzt-paper-2:#f2ebf0;
+    --mzt-plum:#5b3a63;
+    --mzt-plum-deep:#3c2543;
+    --mzt-gold:#c99350;
+    --mzt-gold-soft:#e8c491;
+    --mzt-rose:#b96a72;
+    --mzt-line:#e2d8dd;
+    --mzt-shadow:0 10px 30px rgba(60,37,67,.10);
+    --mzt-shadow-lg:0 22px 48px rgba(60,37,67,.16);
+    --mzt-radius:18px;
+    --mzt-head-h:104px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+    background:var(--mzt-paper);
+    color:var(--mzt-ink);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%;display:block;}
+  a{color:inherit;text-decoration:none;}
+  button{font-family:inherit;cursor:pointer;}
+  h1,h2,h3,h4{margin:0;line-height:1.3;letter-spacing:.01em;}
+  p{margin:0 0 1em;}
+  ul{margin:0;padding:0;list-style:none;}
+
+  .mzt-wrap{max-width:1180px;margin:0 auto;padding:0 22px;}
+  .mzt-section{padding:64px 0;}
+  .mzt-section--tint{background:var(--mzt-paper-2);}
+  .mzt-eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12.5px;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--mzt-gold);font-weight:700;margin-bottom:14px;
+  }
+  .mzt-eyebrow::before{content:"";width:26px;height:2px;background:var(--mzt-gold);display:inline-block;border-radius:2px;}
+  .mzt-h2{font-size:clamp(24px,3.2vw,36px);color:var(--mzt-plum-deep);font-weight:800;}
+  .mzt-h2 em{font-style:normal;color:var(--mzt-rose);}
+  .mzt-lead{color:var(--mzt-ink-soft);max-width:64ch;margin-top:12px;}
+  .mzt-sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:34px;}
+
+  /* ===== 吸顶区：公告 + 页头 ===== */
+  .mzt-sticky{position:sticky;top:0;z-index:60;}
+  .mzt-announce{
+    background:linear-gradient(90deg,var(--mzt-plum-deep),var(--mzt-plum) 60%,var(--mzt-rose));
+    color:#fdf6ee;font-size:13.5px;
+  }
+  .mzt-announce .mzt-wrap{display:flex;align-items:center;gap:14px;padding:9px 22px;flex-wrap:wrap;}
+  .mzt-announce-badge{
+    font-size:11px;font-weight:800;letter-spacing:.14em;
+    background:var(--mzt-gold);color:var(--mzt-plum-deep);
+    padding:2px 9px;border-radius:999px;white-space:nowrap;
+  }
+  .mzt-announce-track{flex:1;min-width:200px;display:flex;gap:26px;overflow:hidden;}
+  .mzt-announce-track span{white-space:nowrap;opacity:.94;}
+  .mzt-announce-track span b{color:var(--mzt-gold-soft);font-weight:700;}
+  .mzt-announce-link{font-size:12.5px;border-bottom:1px dashed rgba(253,246,238,.6);white-space:nowrap;}
+
+  .mzt-header{background:rgba(250,247,242,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--mzt-line);}
+  .mzt-header .mzt-wrap{display:flex;align-items:center;gap:20px;min-height:68px;}
+  .mzt-brand{display:flex;align-items:center;gap:11px;flex:0 0 auto;}
+  .mzt-brand-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(140deg,var(--mzt-plum),var(--mzt-rose));display:grid;place-items:center;color:var(--mzt-gold-soft);font-weight:800;font-size:17px;box-shadow:var(--mzt-shadow);}
+  .mzt-brand-name{font-weight:800;font-size:18px;color:var(--mzt-plum-deep);letter-spacing:.04em;}
+  .mzt-brand-sub{display:block;font-size:10.5px;letter-spacing:.24em;color:var(--mzt-muted);font-weight:600;}
+
+  .mzt-nav{display:flex;gap:4px;margin-left:12px;flex:1;flex-wrap:wrap;}
+  .mzt-nav a{
+    font-size:14px;padding:8px 12px;border-radius:10px;color:var(--mzt-ink-soft);
+    font-weight:600;transition:.22s;
+  }
+  .mzt-nav a:hover,.mzt-nav a:focus-visible{background:rgba(91,58,99,.09);color:var(--mzt-plum-deep);}
+
+  .mzt-header-tools{display:flex;align-items:center;gap:10px;}
+  .mzt-search{position:relative;display:flex;align-items:center;}
+  .mzt-search input{
+    width:196px;padding:9px 12px 9px 34px;border-radius:999px;
+    border:1px solid var(--mzt-line);background:#fff;font-size:13.5px;color:var(--mzt-ink);
+    transition:.25s;outline:none;
+  }
+  .mzt-search input:focus{width:236px;border-color:var(--mzt-gold);box-shadow:0 0 0 3px rgba(201,147,80,.16);}
+  .mzt-search svg{position:absolute;left:11px;width:15px;height:15px;stroke:var(--mzt-muted);fill:none;stroke-width:2;}
+  .mzt-search-feedback{
+    position:absolute;top:calc(100% + 8px);left:0;right:0;background:#fff;
+    border:1px solid var(--mzt-line);border-radius:14px;box-shadow:var(--mzt-shadow-lg);
+    padding:10px;font-size:13px;color:var(--mzt-ink-soft);display:none;z-index:70;
+  }
+  .mzt-search-feedback.mzt-show{display:block;}
+  .mzt-search-feedback strong{color:var(--mzt-rose);}
+  .mzt-search-feedback a{display:block;padding:6px 8px;border-radius:8px;color:var(--mzt-plum);}
+  .mzt-search-feedback a:hover{background:var(--mzt-paper-2);}
+
+  .mzt-btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:7px;
+    border-radius:999px;font-weight:700;font-size:14px;border:1px solid transparent;
+    padding:10px 20px;transition:.22s;white-space:nowrap;
+  }
+  .mzt-btn--primary{background:linear-gradient(135deg,var(--mzt-plum),var(--mzt-rose));color:#fff;box-shadow:0 8px 22px rgba(91,58,99,.28);}
+  .mzt-btn--primary:hover{transform:translateY(-1px);box-shadow:0 12px 26px rgba(91,58,99,.34);}
+  .mzt-btn--ghost{background:#fff;border-color:var(--mzt-line);color:var(--mzt-plum-deep);}
+  .mzt-btn--ghost:hover{border-color:var(--mzt-gold);color:var(--mzt-plum);}
+  .mzt-btn--small{padding:6px 14px;font-size:12.5px;}
+
+  .mzt-burger{display:none;width:42px;height:42px;border-radius:12px;border:1px solid var(--mzt-line);background:#fff;padding:0;place-items:center;}
+  .mzt-burger span{display:block;width:18px;height:2px;background:var(--mzt-plum-deep);border-radius:2px;margin:3px auto;transition:.2s;}
+
+  /* ===== 首屏 ===== */
+  .mzt-hero{position:relative;padding:56px 0 68px;overflow:hidden;background:
+    radial-gradient(1000px 480px at 82% -10%,rgba(185,106,114,.18),transparent 65%),
+    radial-gradient(760px 420px at 6% 100%,rgba(201,147,80,.16),transparent 62%),
+    var(--mzt-paper);}
+  .mzt-hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:46px;align-items:center;}
+  .mzt-hero h1{font-size:clamp(38px,6vw,68px);font-weight:900;color:var(--mzt-plum-deep);letter-spacing:.02em;line-height:1.08;}
+  .mzt-hero h1 .mzt-hero-rail{display:block;font-size:clamp(14px,1.6vw,17px);font-weight:700;letter-spacing:.36em;color:var(--mzt-gold);margin-bottom:16px;}
+  .mzt-hero-tagline{font-size:clamp(16px,2vw,21px);font-weight:700;color:var(--mzt-rose);margin:18px 0 6px;}
+  .mzt-hero-desc{color:var(--mzt-ink-soft);font-size:15.5px;max-width:56ch;}
+  .mzt-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+  .mzt-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:34px;border-top:1px solid var(--mzt-line);padding-top:24px;}
+  .mzt-hero-stat b{display:block;font-size:clamp(22px,2.6vw,30px);color:var(--mzt-plum-deep);font-weight:900;letter-spacing:.01em;}
+  .mzt-hero-stat span{font-size:12.5px;color:var(--mzt-muted);letter-spacing:.06em;}
+  .mzt-hero-visual{position:relative;}
+  .mzt-hero-frame{border-radius:26px;overflow:hidden;box-shadow:var(--mzt-shadow-lg);border:1px solid rgba(226,216,221,.9);}
+  .mzt-hero-frame img{width:100%;aspect-ratio:4/5;object-fit:cover;}
+  .mzt-hero-float{
+    position:absolute;left:-18px;bottom:26px;background:#fff;border-radius:16px;
+    padding:13px 18px;box-shadow:var(--mzt-shadow-lg);border:1px solid var(--mzt-line);
+    max-width:230px;
+  }
+  .mzt-hero-float b{display:block;font-size:13.5px;color:var(--mzt-plum-deep);}
+  .mzt-hero-float span{font-size:12px;color:var(--mzt-muted);}
+  .mzt-hero-chip{
+    position:absolute;right:-10px;top:22px;background:rgba(255,255,255,.95);
+    border-radius:999px;padding:7px 15px;font-size:12px;font-weight:700;color:var(--mzt-rose);
+    border:1px solid var(--mzt-line);box-shadow:var(--mzt-shadow);
+  }
+
+  /* ===== 焦点内容（一幅重点大图 + 文字列表） ===== */
+  .mzt-focus-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:36px;align-items:start;}
+  .mzt-focus-lead{border-radius:var(--mzt-radius);overflow:hidden;background:#fff;border:1px solid var(--mzt-line);box-shadow:var(--mzt-shadow);}
+  .mzt-focus-lead img{width:100%;aspect-ratio:16/10;object-fit:cover;}
+  .mzt-focus-body{padding:22px 24px 24px;}
+  .mzt-focus-body h3{font-size:21px;color:var(--mzt-plum-deep);margin-bottom:8px;}
+  .mzt-focus-body p{font-size:14.5px;color:var(--mzt-ink-soft);margin-bottom:14px;}
+  .mzt-meta{display:flex;flex-wrap:wrap;gap:10px 16px;font-size:12.5px;color:var(--mzt-muted);align-items:center;}
+  .mzt-tag{color:var(--mzt-rose);background:rgba(185,106,114,.1);border-radius:999px;padding:2px 10px;font-weight:700;font-size:11.5px;}
+
+  .mzt-vlist{display:grid;gap:0;}
+  .mzt-vrow{
+    display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;
+    padding:16px 0;border-bottom:1px dashed var(--mzt-line);
+  }
+  .mzt-vrow:last-child{border-bottom:0;}
+  .mzt-vrow-index{font-size:20px;font-weight:900;color:var(--mzt-gold-soft);line-height:1.4;}
+  .mzt-vrow h3{font-size:16px;color:var(--mzt-plum-deep);margin-bottom:4px;}
+  .mzt-vrow p{font-size:13.5px;color:var(--mzt-ink-soft);margin-bottom:6px;}
+  .mzt-vrow .mzt-meta{gap:8px 14px;}
+  .mzt-vrow-acts{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;}
+  .mzt-icon-btn{
+    display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:700;
+    background:#fff;border:1px solid var(--mzt-line);border-radius:999px;padding:5px 12px;color:var(--mzt-ink-soft);transition:.2s;
+  }
+  .mzt-icon-btn:hover{border-color:var(--mzt-gold);color:var(--mzt-plum);}
+  .mzt-icon-btn.mzt-liked{color:#fff;background:linear-gradient(135deg,var(--mzt-rose),var(--mzt-plum));border-color:transparent;}
+  .mzt-icon-btn.mzt-saved{color:var(--mzt-rose);border-color:var(--mzt-rose);}
+
+  /* ===== 精选卡片网格 ===== */
+  .mzt-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+  .mzt-card{
+    background:#fff;border:1px solid var(--mzt-line);border-radius:var(--mzt-radius);overflow:hidden;
+    box-shadow:0 4px 16px rgba(60,37,67,.05);transition:.26s;display:flex;flex-direction:column;
+  }
+  .mzt-card:hover{transform:translateY(-4px);box-shadow:var(--mzt-shadow-lg);border-color:var(--mzt-gold-soft);}
+  .mzt-card img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+  .mzt-card-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;flex:1;}
+  .mzt-card-body h3{font-size:16.5px;color:var(--mzt-plum-deep);}
+  .mzt-card-body p{font-size:13.5px;color:var(--mzt-ink-soft);margin:0;}
+  .mzt-card-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:10px;border-top:1px solid var(--mzt-paper-2);font-size:12px;color:var(--mzt-muted);}
+
+  /* ===== 品牌故事 / 关键词解析长文 ===== */
+  .mzt-story-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:44px;align-items:start;}
+  .mzt-prose h3{font-size:18.5px;color:var(--mzt-plum);margin:26px 0 10px;}
+  .mzt-prose h3:first-child{margin-top:0;}
+  .mzt-prose p{font-size:15px;color:var(--mzt-ink-soft);}
+  .mzt-prose blockquote{
+    margin:22px 0;padding:16px 22px;border-left:3px solid var(--mzt-gold);
+    background:#fff;border-radius:0 14px 14px 0;color:var(--mzt-plum-deep);font-size:14.5px;
+  }
+  .mzt-side-card{
+    background:#fff;border:1px solid var(--mzt-line);border-radius:var(--mzt-radius);
+    padding:22px;box-shadow:var(--mzt-shadow);margin-bottom:20px;
+  }
+  .mzt-side-card h3{font-size:16px;color:var(--mzt-plum-deep);margin-bottom:12px;}
+  .mzt-side-card img{border-radius:12px;margin-bottom:12px;aspect-ratio:16/10;object-fit:cover;width:100%;}
+  .mzt-milestone{display:grid;gap:0;}
+  .mzt-milestone li{display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;padding:11px 0;border-bottom:1px dashed var(--mzt-line);font-size:13.5px;}
+  .mzt-milestone li:last-child{border-bottom:0;}
+  .mzt-milestone b{color:var(--mzt-rose);font-weight:800;}
+
+  /* ===== 专题 ===== */
+  .mzt-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+  .mzt-topic{
+    background:#fff;border:1px solid var(--mzt-line);border-radius:var(--mzt-radius);padding:24px;
+    display:flex;flex-direction:column;gap:12px;transition:.25s;
+  }
+  .mzt-topic:hover{border-color:var(--mzt-gold);box-shadow:var(--mzt-shadow);}
+  .mzt-topic .mzt-topic-status{font-size:11.5px;font-weight:800;letter-spacing:.08em;padding:3px 10px;border-radius:999px;background:rgba(91,58,99,.09);color:var(--mzt-plum);align-self:flex-start;}
+  .mzt-topic h3{font-size:17.5px;color:var(--mzt-plum-deep);}
+  .mzt-topic p{font-size:13.5px;color:var(--mzt-ink-soft);margin:0;}
+  .mzt-topic ul{display:grid;gap:7px;margin-top:4px;}
+  .mzt-topic li{font-size:13px;color:var(--mzt-ink-soft);padding-left:16px;position:relative;}
+  .mzt-topic li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--mzt-gold-soft);}
+  .mzt-topic--feature{grid-column:span 1;background:linear-gradient(160deg,#fff, #fbf1f3);border-color:var(--mzt-rose);}
+
+  /* ===== 创作者（双列简介） ===== */
+  .mzt-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;}
+  .mzt-author{
+    background:#fff;border:1px solid var(--mzt-line);border-radius:var(--mzt-radius);
+    padding:22px;display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;transition:.25s;
+  }
+  .mzt-author:hover{box-shadow:var(--mzt-shadow);border-color:var(--mzt-gold-soft);}
+  .mzt-avatar{
+    width:64px;height:64px;border-radius:18px;display:grid;place-items:center;
+    font-size:22px;font-weight:900;color:#fff;letter-spacing:.02em;box-shadow:var(--mzt-shadow);
+  }
+  .mzt-author h3{font-size:16.5px;color:var(--mzt-plum-deep);}
+  .mzt-author .mzt-author-field{font-size:12.5px;color:var(--mzt-rose);font-weight:700;margin:2px 0 6px;}
+  .mzt-author p{font-size:13.5px;color:var(--mzt-ink-soft);margin:0 0 8px;}
+  .mzt-author-foot{display:flex;gap:14px;font-size:12px;color:var(--mzt-muted);flex-wrap:wrap;}
+  .mzt-author-more{margin-top:10px;}
+
+  /* ===== 榜单 ===== */
+  .mzt-rank-wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;}
+  .mzt-rank{background:#fff;border:1px solid var(--mzt-line);border-radius:var(--mzt-radius);padding:22px;}
+  .mzt-rank h3{font-size:16px;color:var(--mzt-plum-deep);display:flex;align-items:center;gap:8px;margin-bottom:14px;}
+  .mzt-rank h3::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--mzt-rose);}
+  .mzt-rank ol{display:grid;gap:0;counter-reset:mztrank;}
+  .mzt-rank li{
+    display:grid;grid-template-columns:22px minmax(0,1fr) auto;gap:10px;align-items:center;
+    padding:10px 0;border-bottom:1px dashed var(--mzt-line);font-size:13.5px;
+  }
+  .mzt-rank li:last-child{border-bottom:0;}
+  .mzt-rank li::before{counter-increment:mztrank;content:counter(mztrank);font-weight:900;color:var(--mzt-gold);}
+  .mzt-rank li b{font-weight:700;color:var(--mzt-plum-deep);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .mzt-rank li span{font-size:12px;color:var(--mzt-muted);}
+
+  /* ===== 评论区（双列短评） ===== */
+  .mzt-comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+  .mzt-comment{
+    background:#fff;border:1px solid var(--mzt-line);border-radius:16px;padding:18px 20px;
+    display:flex;flex-direction:column;gap:8px;
+  }
+  .mzt-comment-head{display:flex;align-items:center;gap:10px;}
+  .mzt-comment-ava{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:13px;}
+  .mzt-comment-head b{font-size:13.5px;color:var(--mzt-plum-deep);}
+  .mzt-comment-head span{font-size:11.5px;color:var(--mzt-muted);}
+  .mzt-comment p{font-size:13.5px;color:var(--mzt-ink-soft);margin:0;}
+  .mzt-comment-meta{font-size:11.5px;color:var(--mzt-muted);display:flex;gap:12px;}
+  .mzt-score{
+    grid-column:1/-1;background:linear-gradient(135deg,var(--mzt-plum-deep),var(--mzt-plum));
+    color:#fdf6ee;border-radius:var(--mzt-radius);padding:20px 24px;display:flex;flex-wrap:wrap;
+    align-items:center;justify-content:space-between;gap:16px;
+  }
+  .mzt-score b{font-size:34px;font-weight:900;color:var(--mzt-gold-soft);line-height:1;}
+  .mzt-score span{font-size:13px;opacity:.86;}
+  .mzt-score-bars{display:grid;gap:6px;font-size:12px;min-width:200px;}
+  .mzt-score-bars div{display:flex;align-items:center;gap:8px;}
+  .mzt-score-bars i{display:block;height:6px;border-radius:999px;background:var(--mzt-gold-soft);}
+
+  /* ===== 动态 & 合作 & FAQ ===== */
+  .mzt-three{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) minmax(0,1.1fr);gap:26px;align-items:start;}
+  .mzt-panel{background:#fff;border:1px solid var(--mzt-line);border-radius:var(--mzt-radius);padding:24px;}
+  .mzt-panel h3{font-size:16.5px;color:var(--mzt-plum-deep);margin-bottom:14px;}
+  .mzt-news li{padding:11px 0;border-bottom:1px dashed var(--mzt-line);font-size:13.5px;color:var(--mzt-ink-soft);}
+  .mzt-news li:last-child{border-bottom:0;}
+  .mzt-news time{display:block;font-size:11.5px;color:var(--mzt-gold);font-weight:700;letter-spacing:.04em;margin-bottom:2px;}
+  .mzt-partners{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;}
+  .mzt-partner{
+    border:1px solid var(--mzt-line);border-radius:12px;padding:12px 10px;text-align:center;
+    font-size:13px;font-weight:700;color:var(--mzt-ink-soft);background:var(--mzt-paper);
+  }
+  .mzt-faq details{border-bottom:1px solid var(--mzt-line);padding:11px 0;}
+  .mzt-faq details:last-child{border-bottom:0;}
+  .mzt-faq summary{
+    cursor:pointer;font-size:13.8px;font-weight:700;color:var(--mzt-plum-deep);
+    list-style:none;display:flex;justify-content:space-between;gap:12px;
+  }
+  .mzt-faq summary::-webkit-details-marker{display:none;}
+  .mzt-faq summary::after{content:"+";color:var(--mzt-gold);font-weight:900;font-size:16px;line-height:1;}
+  .mzt-faq details[open] summary::after{content:"–";}
+  .mzt-faq p{font-size:13px;color:var(--mzt-ink-soft);margin:8px 0 0;}
+
+  /* ===== CTA / 投稿 ===== */
+  .mzt-cta{
+    background:linear-gradient(130deg,var(--mzt-plum-deep),var(--mzt-plum) 58%,var(--mzt-rose));
+    border-radius:26px;padding:44px;color:#fdf6ee;display:grid;
+    grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:34px;align-items:center;
+    box-shadow:var(--mzt-shadow-lg);
+  }
+  .mzt-cta h2{font-size:clamp(22px,3vw,30px);color:#fff;}
+  .mzt-cta p{color:rgba(253,246,238,.86);font-size:14.5px;margin-top:10px;}
+  .mzt-cta-actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end;}
+  .mzt-cta .mzt-btn--ghost{background:transparent;border-color:rgba(253,246,238,.5);color:#fdf6ee;}
+  .mzt-cta .mzt-btn--ghost:hover{border-color:var(--mzt-gold-soft);color:var(--mzt-gold-soft);}
+  .mzt-cta .mzt-btn--primary{background:var(--mzt-gold);color:var(--mzt-plum-deep);box-shadow:0 8px 22px rgba(0,0,0,.2);}
+
+  /* ===== 页脚 ===== */
+  .mzt-footer{background:#241f2e;color:#cfc6d6;padding:54px 0 26px;margin-top:20px;}
+  .mzt-footer-grid{display:grid;grid-template-columns:minmax(0,1.6fr) repeat(3,minmax(0,1fr));gap:32px;}
+  .mzt-footer h4{font-size:14px;color:#fff;margin-bottom:14px;letter-spacing:.04em;}
+  .mzt-footer-brand{display:flex;align-items:center;gap:11px;margin-bottom:14px;}
+  .mzt-footer p{font-size:13px;color:#a89fbd;line-height:1.8;}
+  .mzt-footer ul{display:grid;gap:8px;}
+  .mzt-footer ul a{font-size:13px;color:#b8aec8;transition:.2s;}
+  .mzt-footer ul a:hover{color:var(--mzt-gold-soft);}
+  .mzt-footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:34px;padding-top:20px;display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:12.5px;color:#8f86a6;}
+
+  /* ===== 弹窗 & Toast ===== */
+  .mzt-modal-mask{
+    position:fixed;inset:0;background:rgba(36,31,46,.6);backdrop-filter:blur(3px);
+    display:none;place-items:center;z-index:200;padding:20px;
+  }
+  .mzt-modal-mask.mzt-show{display:grid;}
+  .mzt-modal{
+    background:var(--mzt-paper);border-radius:20px;padding:28px;max-width:520px;width:100%;
+    box-shadow:var(--mzt-shadow-lg);max-height:86vh;overflow:auto;
+  }
+  .mzt-modal h3{font-size:19px;color:var(--mzt-plum-deep);margin-bottom:10px;}
+  .mzt-modal p{font-size:14px;color:var(--mzt-ink-soft);}
+  .mzt-modal-close{margin-top:16px;display:flex;justify-content:flex-end;}
+  .mzt-field{width:100%;padding:10px 13px;border-radius:12px;border:1px solid var(--mzt-line);font-size:14px;margin-bottom:10px;font-family:inherit;background:#fff;}
+  .mzt-toast{
+    position:fixed;left:50%;bottom:34px;transform:translate(-50%,16px);
+    background:var(--mzt-plum-deep);color:#fdf6ee;font-size:13.5px;font-weight:700;
+    padding:11px 22px;border-radius:999px;box-shadow:var(--mzt-shadow-lg);
+    opacity:0;pointer-events:none;transition:.28s;z-index:300;
+  }
+  .mzt-toast.mzt-show{opacity:1;transform:translate(-50%,0);}
+  .mzt-top{
+    position:fixed;right:22px;bottom:26px;width:46px;height:46px;border-radius:14px;
+    background:linear-gradient(140deg,var(--mzt-plum),var(--mzt-rose));color:#fff;border:0;
+    display:grid;place-items:center;box-shadow:var(--mzt-shadow-lg);font-size:18px;
+    opacity:0;pointer-events:none;transition:.25s;z-index:90;
+  }
+  .mzt-top.mzt-show{opacity:1;pointer-events:auto;}
+
+  /* ===== 响应式 ===== */
+  @media (max-width:1000px){
+    .mzt-hero-grid,.mzt-focus-grid,.mzt-story-grid,.mzt-three,.mzt-cta{grid-template-columns:minmax(0,1fr);}
+    .mzt-card-grid,.mzt-topic-grid,.mzt-rank-wrap{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .mzt-footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+    .mzt-nav{
+      display:none;position:absolute;top:100%;left:0;right:0;
+      background:var(--mzt-paper);border-bottom:1px solid var(--mzt-line);
+      padding:14px 22px;flex-direction:column;gap:2px;box-shadow:var(--mzt-shadow-lg);
+      margin-left:0;
+    }
+    .mzt-nav.mzt-open{display:flex;}
+    .mzt-header .mzt-wrap{position:relative;flex-wrap:wrap;}
+    .mzt-burger{display:grid;margin-left:auto;}
+    .mzt-header-tools{order:3;width:100%;padding-bottom:12px;}
+    .mzt-search{flex:1;}
+    .mzt-search input{width:100%;}
+    .mzt-search input:focus{width:100%;}
+  }
+  @media (max-width:680px){
+    .mzt-section{padding:48px 0;}
+    .mzt-hero{padding:36px 0 50px;}
+    .mzt-card-grid,.mzt-topic-grid,.mzt-rank-wrap,.mzt-author-grid,.mzt-comment-grid,.mzt-partners,.mzt-footer-grid{grid-template-columns:minmax(0,1fr);}
+    .mzt-hero-stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;}
+    .mzt-hero-float{position:static;margin-top:12px;max-width:none;}
+    .mzt-hero-chip{right:8px;top:8px;}
+    .mzt-cta{padding:28px 22px;}
+    .mzt-cta-actions{justify-content:flex-start;}
+    .mzt-announce-track{flex-direction:column;gap:2px;overflow:visible;}
+    .mzt-announce-track span:nth-child(n+3){display:none;}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="mzt-sticky">
+  <div class="mzt-announce" role="region" aria-label="站点公告">
+    <div class="mzt-wrap">
+      <span class="mzt-announce-badge">公告</span>
+      <div class="mzt-announce-track">
+        <span><b>新增</b>「冬日窗光」写真企划 12 组样片已上线</span>
+        <span><b>更新</b>摄影师访谈第二期《光线是会说话的》发布</span>
+        <span><b>开放报名</b>2027 春季素人模特招募 · 首批 60 名</span>
+      </div>
+      <a class="mzt-announce-link" href="#mzt-news">查看更新动态</a>
+    </div>
+  </div>
+  <header class="mzt-header">
+    <div class="mzt-wrap">
+      <a class="mzt-brand" href="#top" aria-label="美之图写真馆首页">
+        <span class="mzt-brand-mark" aria-hidden="true">美</span>
+        <span>
+          <span class="mzt-brand-name">美之图写真馆</span>
+          <span class="mzt-brand-sub">PORTRAIT · VIDEO · 官方</span>
+        </span>
+      </a>
+      <nav class="mzt-nav" id="mztNav" aria-label="主导航">
+        <a href="#mzt-focus">焦点内容</a>
+        <a href="#mzt-topics">专题企划</a>
+        <a href="#mzt-story">品牌故事</a>
+        <a href="#mzt-authors">创作者</a>
+        <a href="#mzt-rank">口碑榜</a>
+        <a href="#mzt-comments">用户评价</a>
+        <a href="#mzt-news">企业动态</a>
+        <a href="#mzt-faq">常见问题</a>
+      </nav>
+      <div class="mzt-header-tools">
+        <div class="mzt-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input type="search" id="mztSearch" placeholder="搜索写真、摄影、幕后…" aria-label="站内搜索" autocomplete="off">
+          <div class="mzt-search-feedback" id="mztSearchFeedback" role="status" aria-live="polite"></div>
+        </div>
+        <button class="mzt-btn mzt-btn--primary mzt-btn--small" type="button" id="mztSubmitBtn">投稿入驻</button>
+        <button class="mzt-burger" type="button" id="mztBurger" aria-label="展开导航菜单" aria-expanded="false" aria-controls="mztNav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="mzt-hero" aria-labelledby="mztHeroTitle">
+    <div class="mzt-wrap mzt-hero-grid">
+      <div>
+        <h1 id="mztHeroTitle"><span class="mzt-hero-rail">官方 · 品牌 · 影像门户</span>美之图写真馆</h1>
+        <p class="mzt-hero-tagline">把一瞬间，留成一张会呼吸的图</p>
+        <p class="mzt-hero-desc">美之图写真馆官方网站是一家人像写真与生活影像的原创视频品牌。我们以专业摄影棚、自然外景与真实人物状态为素材，持续产出高清写真记录、拍摄幕后与人物访谈类精品内容，让每一次快门背后都有可被看见的故事。作为深耕垂直领域的内容平台，我们希望镜头不只美化皮肤，也保留情绪的纹理。</p>
+        <div class="mzt-hero-actions">
+          <a class="mzt-btn mzt-btn--primary" href="#mzt-focus">观看最新作品</a>
+          <a class="mzt-btn mzt-btn--ghost" href="#mzt-topics">浏览专题企划</a>
+          <a class="mzt-btn mzt-btn--ghost" href="#mzt-authors">认识摄影师</a>
+        </div>
+        <div class="mzt-hero-stats" aria-label="品牌核心数据">
+          <div class="mzt-hero-stat"><b>3,860+</b><span>原创写真视频</span></div>
+          <div class="mzt-hero-stat"><b>126 位</b><span>签约创作者</span></div>
+          <div class="mzt-hero-stat"><b>9.4 / 10</b><span>用户口碑评分</span></div>
+        </div>
+      </div>
+      <div class="mzt-hero-visual">
+        <div class="mzt-hero-frame">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 1000'%3E%3Cdefs%3E%3ClinearGradient id='hg' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%233c2543'/%3E%3Cstop offset='0.55' stop-color='%235b3a63'/%3E%3Cstop offset='1' stop-color='%23b96a72'/%3E%3C/linearGradient%3E%3ClinearGradient id='hw' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23fdf6ee' stop-opacity='0.9'/%3E%3Cstop offset='1' stop-color='%23e8c491' stop-opacity='0.2'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='1000' fill='url(%23hg)'/%3E%3Crect x='110' y='170' width='580' height='660' rx='24' fill='%23faf7f2' opacity='0.12'/%3E%3Ccircle cx='400' cy='400' r='128' fill='%23f0b96b' opacity='0.92'/%3E%3Cpath d='M250 690 Q400 560 550 690 L550 800 Q400 740 250 800 Z' fill='url(%23hw)'/%3E%3Crect x='300' y='300' width='200' height='200' rx='100' fill='%23fdf6ee' opacity='0.35'/%3E%3Cpath d='M140 120 L660 120' stroke='%23e8c491' stroke-width='3' opacity='0.6'/%3E%3Cpath d='M140 900 L660 900' stroke='%23e8c491' stroke-width='3' opacity='0.45'/%3E%3Ccircle cx='400' cy='400' r='196' fill='none' stroke='%23fdf6ee' stroke-width='2' opacity='0.4' stroke-dasharray='10 16'/%3E%3Ctext x='400' y='940' text-anchor='middle' fill='%23fdf6ee' font-size='30' font-family='sans-serif' opacity='0.85' letter-spacing='12'%3EMEIZHITU%3C/text%3E%3C/svg%3E" alt="美之图写真馆首屏主视觉：暖金色圆形光晕与人像留白构图" width="800" height="1000">
+        </div>
+        <div class="mzt-hero-float">
+          <b>本周主推 · 冬日窗光</b>
+          <span>自然侧光 × 居家素衣，12 组原创样片</span>
+        </div>
+        <span class="mzt-hero-chip">4K 高清 · 原创正版</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容：一幅重点大图 + 文字列表 -->
+  <section class="mzt-section" id="mzt-focus" aria-labelledby="mztFocusTitle">
+    <div class="mzt-wrap">
+      <div class="mzt-sec-head">
+        <div>
+          <span class="mzt-eyebrow">Focus</span>
+          <h2 class="mzt-h2" id="mztFocusTitle">焦点内容 <em>本期主推</em></h2>
+          <p class="mzt-lead">从美之图写真馆的内容池中挑选一组深度作品与四条值得回看的视频条目，覆盖人像、外景、幕后与访谈四种方向，帮助第一次来的观众迅速理解我们的品质标准。</p>
+        </div>
+        <a class="mzt-btn mzt-btn--ghost mzt-btn--small" href="#mzt-gallery">查看全部精选</a>
+      </div>
+
+      <div class="mzt-focus-grid">
+        <article class="mzt-focus-lead">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 960 600'%3E%3Cdefs%3E%3ClinearGradient id='fg1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f2ebf0'/%3E%3Cstop offset='1' stop-color='%23e8c491'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='960' height='600' fill='url(%23fg1)'/%3E%3Crect x='90' y='70' width='420' height='460' rx='18' fill='%235b3a63' opacity='0.9'/%3E%3Ccircle cx='300' cy='250' r='92' fill='%23f0b96b'/%3E%3Cpath d='M200 430 Q300 350 400 430 L400 530 L200 530 Z' fill='%23faf7f2' opacity='0.85'/%3E%3Crect x='560' y='120' width='310' height='14' rx='7' fill='%233c2543' opacity='0.5'/%3E%3Crect x='560' y='170' width='240' height='14' rx='7' fill='%233c2543' opacity='0.32'/%3E%3Crect x='560' y='220' width='280' height='14' rx='7' fill='%233c2543' opacity='0.22'/%3E%3Crect x='560' y='300' width='150' height='96' rx='12' fill='%23b96a72' opacity='0.75'/%3E%3Crect x='730' y='300' width='150' height='96' rx='12' fill='%233c2543' opacity='0.35'/%3E%3C/svg%3E" alt="焦点作品《冬日窗光：一位女孩的三种侧脸》封面构图" width="960" height="600">
+          <div class="mzt-focus-body">
+            <h3>冬日窗光：一位女孩的三种侧脸</h3>
+            <p>美之图写真馆在 11 月拍摄的年度重点作品。整组作品只使用一扇朝南窗与一块白色反光板，记录模特在早、午、黄昏三个时段的面部状态。视频版完整呈现了布光调整、表情引导与后期选片的全过程，适合想看真实拍摄流程的人。</p>
+            <div class="mzt-meta">
+              <span class="mzt-tag">人像写真</span>
+              <span class="mzt-tag">自然光</span>
+              <span>作者：林知夏</span>
+              <span>18.6 万播放</span>
+              <span>2.3 万收藏</span>
+            </div>
+            <div class="mzt-vrow-acts" style="margin-top:14px;">
+              <button class="mzt-icon-btn" type="button" data-mzt-like data-count="23180">♡ 收藏</button>
+              <button class="mzt-icon-btn" type="button" data-mzt-comment-prompt>展开评论</button>
+              <button class="mzt-icon-btn" type="button" data-mzt-copy>复制链接</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="mzt-vlist">
+          <article class="mzt-vrow">
+            <div class="mzt-vrow-index">01</div>
+            <div>
+              <h3>一张写真定妆前的 40 分钟</h3>
+              <p>妆造、衣料、背景纸的细微选择，如何决定最终画面气质。适合第一次来写真馆的客人。</p>
+              <div class="mzt-meta"><span class="mzt-tag">创作幕后</span><span>作者：周听白</span><span>9.2 万播放</span></div>
+              <div class="mzt-vrow-acts">
+                <button class="mzt-icon-btn" type="button" data-mzt-like data-count="9200">♡ 点赞</button>
+                <button class="mzt-icon-btn" type="button" data-mzt-copy>复制链接</button>
+              </div>
+            </div>
+          </article>
+          <article class="mzt-vrow">
+            <div class="mzt-vrow-index">02</div>
+            <div>
+              <h3>旧街红墙外景：把拥挤拍成安静</h3>
+              <p>在人流密集的老城区完成一组外景写真，关于机位、耐心与沟通的三条实用技巧。</p>
+              <div class="mzt-meta"><span class="mzt-tag">城市探索</span><span>作者：沈拾光</span><span>12.4 万播放</span></div>
+              <div class="mzt-vrow-acts">
+                <button class="mzt-icon-btn" type="button" data-mzt-like data-count="12400">♡ 点赞</button>
+                <button class="mzt-icon-btn" type="button" data-mzt-copy>复制链接</button>
+              </div>
+            </div>
+          </article>
+          <article class="mzt-vrow">
+            <div class="mzt-vrow-index">03</div>
+            <div>
+              <h3>摄影师访谈：光线是会说话的</h3>
+              <p>与主理摄影师对谈 26 分钟，聊为什么我们坚持不用过度磨皮，以及怎样让素人放松。</p>
+              <div class="mzt-meta"><span class="mzt-tag">人物访谈</span><span>作者：美之图编辑部</span><span>7.8 万播放</span></div>
+              <div class="mzt-vrow-acts">
+                <button class="mzt-icon-btn" type="button" data-mzt-like data-count="7800">♡ 点赞</button>
+                <button class="mzt-icon-btn" type="button" data-mzt-copy>复制链接</button>
+              </div>
+            </div>
+          </article>
+          <article class="mzt-vrow">
+            <div class="mzt-vrow-index">04</div>
+            <div>
+              <h3>素人模特的第一组写真</h3>
+              <p>从紧张到自然，一位普通上班族在棚内完成人生第一组写真，全程无滤镜记录。</p>
+              <div class="mzt-meta"><span class="mzt-tag">真实故事</span><span>作者：顾青禾</span><span>21.1 万播放</span></div>
+              <div class="mzt-vrow-acts">
+                <button class="mzt-icon-btn" type="button" data-mzt-like data-count="21100">♡ 点赞</button>
+                <button class="mzt-icon-btn" type="button" data-mzt-copy>复制链接</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 精选内容卡片 -->
+  <section class="mzt-section mzt-section--tint" id="mzt-gallery" aria-labelledby="mztGalleryTitle">
+    <div class="mzt-wrap">
+      <div class="mzt-sec-head">
+        <div>
+          <span class="mzt-eyebrow">Selected</span>
+          <h2 class="mzt-h2" id="mztGalleryTitle">精品内容 <em>三列精选</em></h2>
+          <p class="mzt-lead">美之图写真馆每月从投稿与自制内容中筛选 30 组作品进入精品池。以下三组分别代表居家、户外与棚拍三类不同美学，欢迎收藏后慢慢观看。</p>
+        </div>
+      </div>
+      <div class="mzt-card-grid">
+        <article class="mzt-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23f2ebf0'/%3E%3Crect x='38' y='44' width='250' height='272' rx='14' fill='%23c99350' opacity='0.85'/%3E%3Ccircle cx='160' cy='150' r='58' fill='%23fdf6ee'/%3E%3Cpath d='M100 270 Q160 210 220 270 L220 316 L100 316 Z' fill='%233c2543' opacity='0.65'/%3E%3Crect x='320' y='64' width='270' height='16' rx='8' fill='%235b3a63' opacity='0.45'/%3E%3Crect x='320' y='106' width='200' height='12' rx='6' fill='%235b3a63' opacity='0.28'/%3E%3Crect x='320' y='140' width='240' height='12' rx='6' fill='%235b3a63' opacity='0.2'/%3E%3Crect x='320' y='210' width='120' height='82' rx='10' fill='%23b96a72' opacity='0.7'/%3E%3C/svg%3E" alt="居家系列《窗边的早晨》封面，暖色人物剪影构图" width="640" height="360">
+          <div class="mzt-card-body">
+            <h3>窗边的早晨：居家写真 8 组</h3>
+            <p>不需要棚灯，也不需要复杂道具。用一件白衬衫、一杯热茶和一扇窗，拍出日常里最松弛的状态。</p>
+            <div class="mzt-meta"><span class="mzt-tag">生活方式</span><span>12 组画面</span></div>
+            <div class="mzt-card-foot"><span>作者：林知夏</span><span>15.2 万播放</span></div>
+          </div>
+        </article>
+        <article class="mzt-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='cg2' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23769b8a'/%3E%3Cstop offset='1' stop-color='%233c4f48'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23cg2)'/%3E%3Cpath d='M0 250 L120 170 L230 240 L360 140 L500 235 L640 165 L640 360 L0 360 Z' fill='%232d3d37' opacity='0.9'/%3E%3Ccircle cx='470' cy='90' r='46' fill='%23e8c491'/%3E%3Crect x='60' y='270' width='90' height='60' rx='8' fill='%23f0b96b' opacity='0.8'/%3E%3C/svg%3E" alt="户外系列《山风与裙摆》封面，绿色山脊与人物远景" width="640" height="360">
+          <div class="mzt-card-body">
+            <h3>山风与裙摆：郊野外景实拍</h3>
+            <p>清晨六点出发，赶在日出一个半小时内完成全部拍摄。这条视频记录了外景写真对时间与天气的敬畏。</p>
+            <div class="mzt-meta"><span class="mzt-tag">户外活动</span><span>实拍记录</span></div>
+            <div class="mzt-card-foot"><span>作者：沈拾光</span><span>18.9 万播放</span></div>
+          </div>
+        </article>
+        <article class="mzt-card">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23241f2e'/%3E%3Ccircle cx='320' cy='150' r='78' fill='%23fdf6ee' opacity='0.92'/%3E%3Cpath d='M240 260 Q320 190 400 260 L400 330 L240 330 Z' fill='%23b96a72' opacity='0.85'/%3E%3Crect x='80' y='60' width='64' height='240' rx='32' fill='%23e8c491' opacity='0.7'/%3E%3Crect x='500' y='40' width='64' height='280' rx='32' fill='%23c99350' opacity='0.6'/%3E%3C/svg%3E" alt="棚拍系列《黑背景下的白衬衫》封面，影棚灯光剪影" width="640" height="360">
+          <div class="mzt-card-body">
+            <h3>黑背景下的白衬衫：棚拍布光课</h3>
+            <p>三盏灯、两种背景、一个朴素目标——把人拍立体。本期用最少的设备讲清楚棚拍布光逻辑。</p>
+            <div class="mzt-meta"><span class="mzt-tag">教程干货</span><span>布光图解</span></div>
+            <div class="mzt-card-foot"><span>作者：周听白</span><span>10.4 万播放</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="mzt-section" id="mzt-topics" aria-labelledby="mztTopicsTitle">
+    <div class="mzt-wrap">
+      <div class="mzt-sec-head">
+        <div>
+          <span class="mzt-eyebrow">Editorial</span>
+          <h2 class="mzt-h2" id="mztTopicsTitle">专题企划 <em>持续更新中</em></h2>
+          <p class="mzt-lead">专题是美之图写真馆内容生态中最重要的组织方式。每个专题由主创团队与社区创作者共同完成，从选题、拍摄到成片形成一条完整的原创链路。</p>
+        </div>
+      </div>
+      <div class="mzt-topic-grid">
+        <article class="mzt-topic mzt-topic--feature">
+          <span class="mzt-topic-status">更新至 12 期</span>
+          <h3>冬日窗光计划</h3>
+          <p>以“一扇窗”为唯一场景，记录普通人在冬季最真实的面部光线。全部采用自然光，无补光设备。</p>
+          <ul>
+            <li>第 12 期：早八点的口罩印与笑纹</li>
+            <li>第 11 期：奶奶的手与窗台绿萝</li>
+            <li>第 10 期：加班回来的年轻父亲</li>
+          </ul>
+        </article>
+        <article class="mzt-topic">
+          <span class="mzt-topic-status">更新至 7 期</span>
+          <h3>素人第一张写真</h3>
+          <p>为从未进过摄影棚的普通人免费拍摄一组写真，并完整记录他们的紧张、好奇与放松。</p>
+          <ul>
+            <li>第 7 期：外卖骑手的午后半小时</li>
+            <li>第 6 期：第一次化妆的男大学生</li>
+            <li>第 5 期：退休教师的红围巾</li>
+          </ul>
+        </article>
+        <article class="mzt-topic">
+          <span class="mzt-topic-status">更新至 5 期</span>
+          <h3>棚拍布光小课</h3>
+          <p>面向初学者的棚拍教程企划，每期解决一个具体问题：轮廓光、眼神光、背景分离与柔光距离。</p>
+          <ul>
+            <li>第 5 期：柔光箱越近越柔和吗</li>
+            <li>第 4 期：如何拍出通透的眼神光</li>
+            <li>第 3 期：黑色衣料的质感保留</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌故事 + 关键词解析 -->
+  <section class="mzt-section mzt-section--tint" id="mzt-story" aria-labelledby="mztStoryTitle">
+    <div class="mzt-wrap">
+      <div class="mzt-sec-head">
+        <div>
+          <span class="mzt-eyebrow">Brand Story</span>
+          <h2 class="mzt-h2" id="mztStoryTitle">品牌故事与 <em>写真馆深度解析</em></h2>
+          <p class="mzt-lead">作为一家持续运营的写真馆，我们相信品牌不是一张海报，而是一段可以被检验的时间线。以下内容说明美之图写真馆为何这样拍、为什么这样剪，以及我们如何与社区共同成长。</p>
+        </div>
+      </div>
+      <div class="mzt-story-grid">
+        <div class="mzt-prose">
+          <h3>一、从一间三十平米的棚开始</h3>
+          <p>美之图写真馆创立于 2016 年冬天，最初只是城市老居民楼里一间三十平米的摄影棚。第一台相机是二手的，第一块背景布是手工缝的，第一位客人是隔壁开花店的阿姨。她不太会面对镜头，于是我们花了一个下午只是聊天，最后拍下的那张侧脸成了写真馆沿用至今的品牌符号。这件事定下了我们后来的拍摄方法：先理解人，再按下快门。官网上的每一组作品，都保留了这个最初的顺序。</p>
+          <p>随着订单增加，我们陆续把拍摄范围从棚内延伸到城市街巷、郊野山脊与普通人的家中。设备在升级，但工作流程没有变得复杂：拍摄前一次面谈，拍摄中一次真实的对话，拍摄后一次坦诚的选片。美之图写真馆不追求让每个人都变成模特，而是让每个人在自己熟悉的状态里被好好看见。</p>
+
+          <h3>二、“写真”在美之图写真馆意味着什么</h3>
+          <p>写真不是把人修成另一个样子。我们内部有一条不算宽松的标准：皮肤纹理可以优化，但轮廓与情绪不能被抹平；光线可以设计，但不能让人物表情僵硬；后期可以调色，但不能把真实的身体比例改到失真。这条标准让我们损失过一些追求“网红感”的订单，也让我们赢得了更稳定的口碑。很多客人第二次、第三次回来，带着家人、朋友、同事，理由往往是同一句话：照片里的我，还是我。</p>
+          <p>为了让这种真实性可被验证，我们把大量拍摄过程做成视频公开：布光怎么摆，模特怎么放松，选片时删掉了什么。这些视频不追求炫技，更像一份持续更新的工作笔记。创作者在评论区提出的问题，常常会成为下一期视频的选题。这种由社区推动的内容生产，是美之图写真馆内容生态中最有生命力的部分。</p>
+
+          <h3>三、社区、创作者与写真馆的关系</h3>
+          <p>我们把社区看作品牌的第二个摄影棚。签约创作者来自不同城市，有职业摄影师、化妆师、服装搭配师，也有从客人变成分享者的素人。美之图写真馆为他们提供场地、设备与剪辑支持，他们则为平台带来多元的视角：有人专注胶片质感，有人偏爱高调白背景，有人专门拍五十岁以上的女性。多元并不削弱品牌调性，反而让“真实、温暖、有力量”这几个词有了具体的面孔。</p>
+          <p>为了保证内容品质，我们设置了三道筛选：投稿初筛看画面完整度，复审看叙事是否成立，终审看是否与品牌价值观一致。通过的作品会进入精品池，获得官方推荐与分成。未能通过的作品也会收到具体修改建议，这是我们坚持的用户至上。正因为这套机制持续运转，写真馆才能在垂直领域保持稳定的更新节奏与可预期的观看体验。</p>
+
+          <h3>四、我们如何理解镜头的责任</h3>
+          <p>人像摄影天然涉及信任。客人把身体与表情交给镜头，平台就有责任保护这份信任。美之图写真馆对所有上线内容执行授权确认，涉及未成年人的作品必须由监护人书面同意；我们也拒绝任何带有冒犯性或误导性的修图需求。社会责任不是一句口号，而是落在每一张成片的发布流程里。</p>
+          <p>同时，我们尝试让影像产生更实际的连接。素人第一张写真企划为普通劳动者免费拍摄；冬日窗光计划记录了社区里被忽视的日常面孔；每年一次的公开课向所有爱好者开放。这些项目带来的影响力，远比单纯追求播放量更让我们在意。我们相信一个持续运营的品牌，应该既能输出精品内容，也能在真实生活里留下一点温度。</p>
+
+          <blockquote>“照片会旧，但被认真对待的那一刻不会。”——美之图写真馆主理人访谈摘录</blockquote>
+        </div>
+
+        <aside>
+          <div class="mzt-side-card">
+            <h3>品牌时间线</h3>
+            <ul class="mzt-milestone">
+              <li><b>2016</b><span>三十平米棚成立，首组人像写真上线</span></li>
+              <li><b>2018</b><span>开启外景系列，签约首批 12 位创作者</span></li>
+              <li><b>2021</b><span>视频频道上线，公开布光与选片流程</span></li>
+              <li><b>2023</b><span>素人第一张写真企划启动，完成 40 组</span></li>
+              <li><b>2026</b><span>创作者增至 126 位，精品内容突破 3,800 条</span></li>
+            </ul>
+          </div>
+          <div class="mzt-side-card">
+            <h3>年度品牌关键词</h3>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 560 350'%3E%3Crect width='560' height='350' fill='%233c2543'/%3E%3Cg fill='none' stroke='%23e8c491' stroke-width='2' opacity='0.75'%3E%3Ccircle cx='280' cy='175' r='120'/%3E%3Ccircle cx='280' cy='175' r='82'/%3E%3Ccircle cx='280' cy='175' r='44'/%3E%3C/g%3E%3Ccircle cx='280' cy='175' r='16' fill='%23f0b96b'/%3E%3Ctext x='280' y='40' text-anchor='middle' fill='%23fdf6ee' font-size='20' font-family='sans-serif' letter-spacing='6'%3EREAL LIGHT%3C/text%3E%3C/svg%3E" alt="美之图写真馆年度品牌关键词图形，同心圆与光束结构" width="560" height="350">
+            <p style="font-size:13px;color:var(--mzt-ink-soft);margin:0;">真实 · 温暖 · 匠心 · 陪伴。四个词对应四条内容线：素人记录、自然光企划、布光教程与长期影像档案。</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="mzt-section" id="mzt-authors" aria-labelledby="mztAuthorsTitle">
+    <div class="mzt-wrap">
+      <div class="mzt-sec-head">
+        <div>
+          <span class="mzt-eyebrow">Creators</span>
+          <h2 class="mzt-h2" id="mztAuthorsTitle">签约创作者 <em>与写真馆同行的人</em></h2>
+          <p class="mzt-lead">美之图写真馆的创作者来自不同城市与背景，他们在同一套品质标准下保留各自的美学偏好。点击“查看档案”可以了解他们更完整的创作脉络。</p>
+        </div>
+      </div>
+      <div class="mzt-author-grid">
+        <article class="mzt-author">
+          <div class="mzt-avatar" style="background:linear-gradient(140deg,#5b3a63,#b96a72);">林</div>
+          <div>
+            <h3>林知夏</h3>
+            <div class="mzt-author-field">自然光人像 · 居家写真</div>
+            <p>美之图写真馆主理摄影师之一，擅长在一扇窗与一块反光板之间找到人物的松弛感。坚持原型保留的后期原则，作品被社区称为“最像本人”的写真。</p>
+            <div class="mzt-author-foot"><span>作品 386 条</span><span>粉丝 24.6 万</span></div>
+            <div class="mzt-author-more"><button class="mzt-btn mzt-btn--ghost mzt-btn--small" type="button" data-mzt-author="林知夏" data-mzt-field="自然光人像 · 居家写真">查看档案</button></div>
+          </div>
+        </article>
+        <article class="mzt-author">
+          <div class="mzt-avatar" style="background:linear-gradient(140deg,#3c4f48,#769b8a);">沈</div>
+          <div>
+            <h3>沈拾光</h3>
+            <div class="mzt-author-field">城市外景 · 在地文化</div>
+            <p>常年背着相机在老城区穿行，擅长把拥挤的街景拍出安静层次。负责写真馆外景系列的路线设计，对光线时刻表有一套自己的笔记。</p>
+            <div class="mzt-author-foot"><span>作品 274 条</span><span>粉丝 19.8 万</span></div>
+            <div class="mzt-author-more"><button class="mzt-btn mzt-btn--ghost mzt-btn--small" type="button" data-mzt-author="沈拾光" data-mzt-field="城市外景 · 在地文化">查看档案</button></div>
+          </div>
+        </article>
+        <article class="mzt-author">
+          <div class="mzt-avatar" style="background:linear-gradient(140deg,#241f2e,#c99350);">周</div>
+          <div>
+            <h3>周听白</h3>
+            <div class="mzt-author-field">棚拍布光 · 教程干货</div>
+            <p>写真馆技术负责人，负责布光方案与设备培训。讲课风格直接，喜欢用最少的灯解决最大的问题，是社区新人最常提到的一位老师。</p>
+            <div class="mzt-author-foot"><span>作品 198 条</span><span>粉丝 16.3 万</span></div>
+            <div class="mzt-author-more"><button class="mzt-btn mzt-btn--ghost mzt-btn--small" type="button" data-mzt-author="周听白" data-mzt-field="棚拍布光 · 教程干货">查看档案</button></div>
+          </div>
+        </article>
+        <article class="mzt-author">
+          <div class="mzt-avatar" style="background:linear-gradient(140deg,#b96a72,#e8c491);">顾</div>
+          <div>
+            <h3>顾青禾</h3>
+            <div class="mzt-author-field">素人记录 · 情感故事</div>
+            <p>从客人转为创作者的代表。她擅长在镜头前引导零经验的人放开身体，用聊天代替指令，作品多以普通人的真实状态为主题。</p>
+            <div class="mzt-author-foot"><span>作品 162 条</span><span>粉丝 13.7 万</span></div>
+            <div class="mzt-author-more"><button class="mzt-btn mzt-btn--ghost mzt-btn--small" type="button" data-mzt-author="顾青禾" data-mzt-field="素人记录 · 情感故事">查看档案</button></div>
+          </div>
+        </article>
+        <article class="mzt-author">
+          <div class="mzt-avatar" style="background:linear-gradient(140deg,#3c2543,#5b3a63);">许</div>
+          <div>
+            <h3>许南舟</h3>
+            <div class="mzt-author-field">胶片质感 · 艺术美学</div>
+            <p>偏爱胶片颗粒与低饱和影调，负责写真馆的胶片实验线。她认为质感不是滤镜，而是拍摄时刻的选择与克制。</p>
+            <div class="mzt-author-foot"><span>作品 143 条</span><span>粉丝 11.2 万</span></div>
+            <div class="mzt-author-more"><button class="mzt-btn mzt-btn--ghost mzt-btn--small" type="button" data-mzt-author="许南舟" data-mzt-field="胶片质感 · 艺术美学">查看档案</button></div>
+          </div>
+        </article>
+        <article class="mzt-author">
+          <div class="mzt-avatar" style="background:linear-gradient(140deg,#c99350,#b96a72);">程</div>
+          <div>
+            <h3>程一木</h3>
+            <div class="mzt-author-field">妆造设计 · 创作幕后</div>
+            <p>妆造师出身，负责拍摄前的造型方案。她坚持妆容服务于人物而不是覆盖人物，擅长用一件小配饰改变整组画面的气质。</p>
+            <div class="mzt-author-foot"><span>作品 121 条</span><span>粉丝 9.6 万</span></div>
+            <div class="mzt-author-more"><button class="mzt-btn mzt-btn--ghost mzt-btn--small" type="button" data-mzt-author="程一木" data-mzt-field="妆造设计 · 创作幕后">查看档案</button></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 数据榜单 -->
+  <section class="mzt-section mzt-section--tint" id="mzt-rank" aria-labelledby="mztRankTitle">
+    <div class="mzt-wrap">
+      <div class="mzt-sec-head">
+        <div>
+          <span class="mzt-eyebrow">Leaderboard</span>
+          <h2 class="mzt-h2" id="mztRankTitle">口碑与热度 <em>三张榜单</em></h2>
+          <p class="mzt-lead">榜单每周一更新，综合播放、收藏、评论与完播率计算，是美之图写真馆判断内容品质的重要参考，也方便新观众快速找到社区公认的好作品。</p>
+        </div>
+      </div>
+      <div class="mzt-rank-wrap">
+        <div class="mzt-rank">
+          <h3>本周热度榜</h3>
+          <ol>
+            <li><b>素人模特的第一组写真</b><span>21.1 万</span></li>
+            <li><b>山风与裙摆：郊野外景实拍</b><span>18.9 万</span></li>
+            <li><b>冬日窗光：三种侧脸</b><span>18.6 万</span></li>
+            <li><b>旧街红墙外景实战</b><span>12.4 万</span></li>
+            <li><b>棚拍布光小课第 5 期</b><span>10.4 万</span></li>
+          </ol>
+        </div>
+        <div class="mzt-rank">
+          <h3>新人榜</h3>
+          <ol>
+            <li><b>阿隅的第一次棚拍</b><span>3.2 万</span></li>
+            <li><b>用手机拍出窗光侧脸</b><span>2.8 万</span></li>
+            <li><b>奶奶的红围巾</b><span>2.4 万</span></li>
+            <li><b>雨天阳台的一组白衬衫</b><span>1.9 万</span></li>
+            <li><b>十分钟学会看光线</b><span>1.5 万</span></li>
+          </ol>
+        </div>
+        <div class="mzt-rank">
+          <h3>口碑榜</h3>
+          <ol>
+            <li><b>摄影师访谈：光线会说话</b><span>9.8</span></li>
+            <li><b>修图到底该修掉什么</b><span>9.7</span></li>
+            <li><b>一张写真定妆前的 40 分钟</b><span>9.6</span></li>
+            <li><b>如何让被拍的人放松</b><span>9.5</span></li>
+            <li><b>黑背景下的白衬衫</b><span>9.4</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 用户评价 -->
+  <section class="mzt-section" id="mzt-comments" aria-labelledby="mztCommentsTitle">
+    <div class="mzt-wrap">
+      <div class="mzt-sec-head">
+        <div>
+          <span class="mzt-eyebrow">Reviews</span>
+          <h2 class="mzt-h2" id="mztCommentsTitle">用户评价 <em>来自社区的声音</em></h2>
+          <p class="mzt-lead">这些评价来自拍摄客人、长期观众与投稿创作者。我们完整保留不同长度的反馈，包括建议和批评，因为口碑是写真馆最需要被持续验证的东西。</p>
+        </div>
+      </div>
+      <div class="mzt-comment-grid">
+        <div class="mzt-score">
+          <div>
+            <b>9.4</b>
+            <span style="display:block;">综合口碑评分 · 2,316 条有效评价</span>
+          </div>
+          <div class="mzt-score-bars">
+            <div><span style="width:44px;">画面</span><i style="width:92%;"></i></div>
+            <div><span style="width:44px;">服务</span><i style="width:88%;"></i></div>
+            <div><span style="width:44px;">真实感</span><i style="width:95%;"></i></div>
+          </div>
+        </div>
+        <article class="mzt-comment">
+          <div class="mzt-comment-head"><span class="mzt-comment-ava" style="background:#5b3a63;">阿</span><b>阿隅</b><span>拍摄客人</span></div>
+          <p>我是那种一面对镜头就脸部僵硬的人。摄影师没有让我摆姿势，先聊了半小时工作，等我真的放松下来才开始拍。成片我很喜欢，像是我，但状态更好。</p>
+          <div class="mzt-comment-meta"><span>2026-11-08</span><span>有用 42</span></div>
+        </article>
+        <article class="mzt-comment">
+          <div class="mzt-comment-head"><span class="mzt-comment-ava" style="background:#b96a72;">夏</span><b>夏末</b><span>社区观众</span></div>
+          <p>看布光小课学到很多，节奏不废话，每期只解决一个问题。唯一想提的是能不能多讲一点手机拍摄的替代方案，学生党设备有限。</p>
+          <div class="mzt-comment-meta"><span>2026-11-05</span><span>有用 31</span></div>
+        </article>
+        <article class="mzt-comment">
+          <div class="mzt-comment-head"><span class="mzt-comment-ava" style="background:#3c4f48;">老</span><b>老陈的相机</b><span>长期观众</span></div>
+          <p>关注三年了，最打动我的还是素人企划。愿意花时间去拍外卖员、退休教师，而不是只拍漂亮模特，这样的写真馆不多。</p>
+          <div class="mzt-comment-meta"><span>2026-10-29</span><span>有用 78</span></div>
+        </article>
+        <article class="mzt-comment">
+          <div class="mzt-comment-head"><span class="mzt-comment-ava" style="background:#c99350;">南</span><b>南栀</b><span>投稿创作者</span></div>
+          <p>投稿被退回过一次，但收到的修改建议非常具体，指出了我选片节奏的问题。按建议重剪后入选精品池，这种认真对待投稿的态度值得信赖。</p>
+          <div class="mzt-comment-meta"><span>2026-10-21</span><span>有用 26</span></div>
+        </article>
+        <article class="mzt-comment">
+          <div class="mzt-comment-head"><span class="mzt-comment-ava" style="background:#3c2543;">一</span><b>一只橘子</b><span>拍摄客人</span></div>
+          <p>整体体验很好，选片环节给足时间，没有推销。就是棚内的暖气有点弱，冬天拍摄记得带件外套。</p>
+          <div class="mzt-comment-meta"><span>2026-11-12</span><span>有用 12</span></div>
+        </article>
+        <article class="mzt-comment">
+          <div class="mzt-comment-head"><span class="mzt-comment-ava" style="background:#b96a72;">木</span><b>木木不木</b><span>社区观众</span></div>
+          <p>喜欢你们保留皮肤纹理的做法。现在很多写真看多了都一样，脸都光滑得像塑料，你们的东西还能看出人味。</p>
+          <div class="mzt-comment-meta"><span>2026-11-02</span><span>有用 55</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 企业动态 / 合作 / FAQ -->
+  <section class="mzt-section mzt-section--tint" id="mzt-news" aria-labelledby="mztNewsTitle">
+    <div class="mzt-wrap">
+      <div class="mzt-sec-head">
+        <div>
+          <span class="mzt-eyebrow">Updates</span>
+          <h2 class="mzt-h2" id="mztNewsTitle">企业动态 <em>官方发布</em></h2>
+          <p class="mzt-lead">这里汇总美之图写真馆的官方发布、合作进展与内容更新。所有信息以官方渠道为准，欢迎社区监督。</p>
+        </div>
+      </div>
+      <div class="mzt-three">
+        <div class="mzt-panel">
+          <h3>近期动态</h3>
+          <ul class="mzt-news">
+            <li><time>2026-11-18</time>「冬日窗光计划」第 12 期上线，同步开放第 13 期素人报名。</li>
+            <li><time>2026-11-10</time>美之图写真馆与三家本地冲印工作室达成长期合作，创作者可享样片输出折扣。</li>
+            <li><time>2026-10-30</time>布光小课完成第一季共 5 期，配套图文笔记已在官网免费下载。</li>
+            <li><time>2026-10-14</time>年度社区投票启动，共 24 组作品入围，投票截止 12 月 5 日。</li>
+          </ul>
+        </div>
+        <div class="mzt-panel">
+          <h3>合作品牌与伙伴</h3>
+          <div class="mzt-partners">
+            <span class="mzt-partner">光和冲印</span>
+            <span class="mzt-partner">木野布景</span>
+            <span class="mzt-partner">一盏茶摄影空间</span>
+            <span class="mzt-partner">南巷布衣</span>
+            <span class="mzt-partner">石阶影像器材</span>
+            <span class="mzt-partner">城市影像周</span>
+          </div>
+          <p style="font-size:12.5px;color:var(--mzt-muted);margin:14px 0 0;">合作申请请通过“联系我们”提交，通常在五个工作日内回复。</p>
+        </div>
+        <div class="mzt-panel mzt-faq" id="mzt-faq">
+          <h3>常见问题</h3>
+          <details open>
+            <summary>第一次拍写真需要准备什么？</summary>
+            <p>带一两件自己穿着舒服的衣服即可，其余妆造与道具由写真馆准备。拍摄前会安排一次十分钟的面谈，确认风格与在意点。</p>
+          </details>
+          <details>
+            <summary>后期会做多大程度的修图？</summary>
+            <p>我们保留皮肤纹理与原有轮廓，只做轻度瑕疵优化与整体调色。若你需要特殊的风格化处理，可以在选片时提出。</p>
+          </details>
+          <details>
+            <summary>成片多久可以拿到？</summary>
+            <p>常规周期为拍摄后 10 个工作日，外景或胶片类作品为 15 个工作日。加急需求请提前沟通。</p>
+          </details>
+          <details>
+            <summary>可以自己投稿视频吗？</summary>
+            <p>可以。请通过投稿入口提交作品信息与授权说明，通过三道审核后会进入精品池并获得官方推荐。</p>
+          </details>
+          <details>
+            <summary>未成年人可以拍摄吗？</summary>
+            <p>可以，但必须由监护人全程陪同并签署书面同意，涉及服装与场景的调整需监护人确认。</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 投稿 CTA -->
+  <section class="mzt-section" aria-labelledby="mztCtaTitle">
+    <div class="mzt-wrap">
+      <div class="mzt-cta">
+        <div>
+          <h2 id="mztCtaTitle">把你的影像，交给美之图写真馆的社区</h2>
+          <p>无论你是一组照片、一条幕后记录，还是一段拍摄手记，我们都愿意认真看完。投稿通过审核后可进入精品池，获得官方展示与内容分成，并有机会参与线下公开课与年度影像展。</p>
+        </div>
+        <div class="mzt-cta-actions">
+          <button class="mzt-btn mzt-btn--primary" type="button" id="mztSubmitBtn2">立即投稿</button>
+          <a class="mzt-btn mzt-btn--ghost" href="#mzt-faq">了解规则</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="mzt-footer">
+  <div class="mzt-wrap">
+    <div class="mzt-footer-grid">
+      <div>
+        <div class="mzt-footer-brand">
+          <span class="mzt-brand-mark" aria-hidden="true">美</span>
+          <span>
+            <span class="mzt-brand-name" style="color:#fff;">美之图写真馆</span>
+            <span class="mzt-brand-sub" style="color:#8f86a6;">PORTRAIT · VIDEO · OFFICIAL</span>
+          </span>
+        </div>
+        <p>美之图写真馆官方网站，专注人像写真与生活影像的原创品牌。我们以真实、温暖、有力量的镜头语言，持续为社区提供高清精品内容，与创作者共同构建值得信赖的内容生态。</p>
+      </div>
+      <div>
+        <h4>浏览内容</h4>
+        <ul>
+          <li><a href="#mzt-focus">焦点内容</a></li>
+          <li><a href="#mzt-gallery">精品内容</a></li>
+          <li><a href="#mzt-topics">专题企划</a></li>
+          <li><a href="#mzt-rank">口碑榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于我们</h4>
+        <ul>
+          <li><a href="#mzt-story">品牌故事</a></li>
+          <li><a href="#mzt-authors">签约创作者</a></li>
+          <li><a href="#mzt-news">企业动态</a></li>
+          <li><a href="#mzt-faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系我们</h4>
+        <ul>
+          <li><a href="#mzt-faq">合作与投稿</a></li>
+          <li><a href="#mzt-comments">用户评价</a></li>
+          <li><a href="#top">回到首页</a></li>
+          <li><button class="mzt-btn mzt-btn--ghost mzt-btn--small" type="button" id="mztCopyFoot" style="background:transparent;border-color:rgba(255,255,255,.24);color:#cfc6d6;">复制官网链接</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mzt-footer-bottom">
+      <span>© 2016–2026 美之图写真馆 版权所有 · 持续运营中</span>
+      <span>备案号：美ICP备20160318号-2 · 官方发布内容，未经授权禁止转载</span>
+    </div>
+  </div>
+</footer>
+
+<div class="mzt-modal-mask" id="mztModal" role="dialog" aria-modal="true" aria-labelledby="mztModalTitle">
+  <div class="mzt-modal">
+    <h3 id="mztModalTitle">投稿入驻美之图写真馆</h3>
+    <p id="mztModalDesc">填写作品链接与联系方式，我们会在五个工作日内回复审核结果。</p>
+    <form id="mztModalForm">
+      <input class="mzt-field" type="text" placeholder="你的昵称" aria-label="昵称" required>
+      <input class="mzt-field" type="email" placeholder="联系邮箱" aria-label="联系邮箱" required>
+      <input class="mzt-field" type="text" placeholder="作品链接或一句话简介" aria-label="作品说明">
+      <div class="mzt-modal-close">
+        <button class="mzt-btn mzt-btn--ghost mzt-btn--small" type="button" id="mztModalCancel" style="margin-right:8px;">取消</button>
+        <button class="mzt-btn mzt-btn--primary mzt-btn--small" type="submit">提交</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="mzt-toast" id="mztToast" role="status" aria-live="polite"></div>
+<button class="mzt-top" id="mztTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var mobileNav = document.getElementById('mztNav');
+  var burger = document.getElementById('mztBurger');
+  burger.addEventListener('click', function(){
+    var open = mobileNav.classList.toggle('mzt-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mobileNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      mobileNav.classList.remove('mzt-open');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  var headerH = 104;
+  function setOffset(){
+    var sticky = document.querySelector('.mzt-sticky');
+    headerH = sticky.offsetHeight + 8;
+    document.documentElement.style.scrollPaddingTop = headerH + 'px';
+  }
+  setOffset();
+  window.addEventListener('resize', setOffset);
+
+  var searchInput = document.getElementById('mztSearch');
+  var searchBox = document.getElementById('mztSearchFeedback');
+  var topics = [
+    {k:'写真', t:'人像写真', href:'#mzt-focus'},
+    {k:'布光', t:'棚拍布光小课', href:'#mzt-topics'},
+    {k:'外景', t:'城市外景系列', href:'#mzt-gallery'},
+    {k:'创作者', t:'签约创作者名录', href:'#mzt-authors'},
+    {k:'访谈', t:'摄影师访谈', href:'#mzt-focus'},
+    {k:'投稿', t:'投稿入驻说明', href:'#mzt-faq'},
+    {k:'评价', t:'用户口碑', href:'#mzt-comments'}
+  ];
+  searchInput.addEventListener('input', function(){
+    var q = searchInput.value.trim();
+    if(!q){
+      searchBox.classList.remove('mzt-show');
+      searchBox.innerHTML = '';
+      return;
+    }
+    var hits = topics.filter(function(item){
+      return item.t.indexOf(q) > -1 || item.k.indexOf(q) > -1;
+    });
+    var html = hits.length
+      ? '<div>找到 <strong>' + hits.length + '</strong> 个与“' + q + '”相关的内容入口：</div>'
+      : '<div>暂未找到“' + q + '”的直接结果，可尝试：写真、布光、外景、访谈。</div>';
+    hits.forEach(function(item){
+      html += '<a href="' + item.href + '">' + item.t + '</a>';
+    });
+    searchBox.innerHTML = html;
+    searchBox.classList.add('mzt-show');
+  });
+  searchBox.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      searchBox.classList.remove('mzt-show');
+    }
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.mzt-search')){
+      searchBox.classList.remove('mzt-show');
+    }
+  });
+
+  var toast = document.getElementById('mztToast');
+  var toastTimer;
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('mzt-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toast.classList.remove('mzt-show');
+    }, 2200);
+  }
+
+  var modal = document.getElementById('mztModal');
+  var modalTitle = document.getElementById('mztModalTitle');
+  var modalDesc = document.getElementById('mztModalDesc');
+  function openModal(title, desc){
+    modalTitle.textContent = title;
+    modalDesc.textContent = desc;
+    modal.classList.add('mzt-show');
+  }
+  function closeModal(){
+    modal.classList.remove('mzt-show');
+  }
+  document.getElementById('mztModalCancel').addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){
+    if(e.target === modal) closeModal();
+  });
+  document.getElementById('mztModalForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    closeModal();
+    showToast('已提交，美之图写真馆将在五个工作日内回复');
+    this.reset();
+  });
+  document.getElementById('mztSubmitBtn').addEventListener('click', function(){
+    openModal('投稿入驻美之图写真馆', '填写作品链接与联系方式，我们会在五个工作日内回复审核结果。');
+  });
+  document.getElementById('mztSubmitBtn2').addEventListener('click', function(){
+    openModal('投稿入驻美之图写真馆', '填写作品链接与联系方式，我们会在五个工作日内回复审核结果。');
+  });
+
+  document.addEventListener('click', function(e){
+    var like = e.target.closest('[data-mzt-like]');
+    if(like){
+      like.classList.toggle('mzt-liked');
+      var base = parseInt(like.getAttribute('data-count'), 10) || 0;
+      if(like.classList.contains('mzt-liked')){
+        like.textContent = '♥ 已赞 ' + (base + 1);
+        showToast('已点赞，感谢支持原创');
+      }else{
+        var label = like.textContent.indexOf('收藏') > -1 ? '♡ 收藏' : '♡ 点赞';
+        like.textContent = label;
+      }
+      return;
+    }
+    var prompt = e.target.closest('[data-mzt-comment-prompt]');
+    if(prompt){
+      showToast('评论区已开放，欢迎留下你的拍摄建议');
+      document.getElementById('mzt-comments').scrollIntoView({behavior:'smooth', block:'start'});
+      return;
+    }
+    var copyBtn = e.target.closest('[data-mzt-copy]');
+    if(copyBtn){
+      copyLink();
+      return;
+    }
+    var authorBtn = e.target.closest('[data-mzt-author]');
+    if(authorBtn){
+      openModal(authorBtn.getAttribute('data-mzt-author') + ' · 创作者档案', '擅长领域：' + authorBtn.getAttribute('data-mzt-field') + '。美之图写真馆签约创作者，完整作品与访谈内容请关注官方发布。');
+      return;
+    }
+  });
+
+  function copyLink(){
+    var url = window.location.href;
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(url).then(function(){
+        showToast('链接已复制，可分享给朋友');
+      }, function(){
+        showToast('复制失败，请手动复制地址');
+      });
+    }else{
+      showToast('当前环境不支持自动复制');
+    }
+  }
+  document.getElementById('mztCopyFoot').addEventListener('click', copyLink);
+
+  var topBtn = document.getElementById('mztTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){
+      topBtn.classList.add('mzt-show');
+    }else{
+      topBtn.classList.remove('mzt-show');
+    }
+  });
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+</body>
+  </html>
